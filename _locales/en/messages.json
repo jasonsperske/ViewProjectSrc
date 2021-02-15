@@ -1,0 +1,6 @@
+{
+  "ViewProjectDefaultTitle": {
+    "message":"Project Information",
+    "description":"Title that appears if no project-src-title is present"
+  }
+}
