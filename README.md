@@ -24,7 +24,7 @@ The plug-in tries to be as flexible as HTML in allowing single or double quotes 
 
      <meta name="project-src-base" content="[URL]"/>
 
-This tag will get added to all URL_FRAGMENTS making them clickable.  The screenshot above was generated from http://jason.spreske.com which contains the following project-src tags:
+This tag will get added to all URL_FRAGMENTS making them clickable.  The screenshot above was generated from http://jason.sperske.com which contains the following project-src tags:
 
     <meta name="project-src" content="https://github.com/jasonsperske/website"/>
     <meta name="project-src-base" content="https://github.com/jasonsperske/website/blob/master"/>
