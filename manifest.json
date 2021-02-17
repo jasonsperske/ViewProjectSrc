@@ -1,6 +1,6 @@
 {
   "name": "View Project Source",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "manifest_version": 2,
   "description": "Reads embeded meta tags that reveal a sites project structure, to help people learn how the web is made.",
   "homepage_url": "http://jason.sperske.com/",

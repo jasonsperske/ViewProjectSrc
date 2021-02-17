@@ -1,13 +1,14 @@
 let projectMetaData;
 
 window.onload = () => {
-  const STRUCTURED_DATA_REGEX = /^{['"](\w*)['"]:\s?['"](.*)['"]}$/;
+  const STRUCTURED_DATA_REGEX = /^{\s*['"]?([\w_]*)['"]?\s*:\s*['"](.*)['"]\s*}$/;
 
   projectMetaData = [...document.head.querySelectorAll('meta[name^=project-src]')].reduce((acc, meta) => {
     const name = meta.name;
     let content = meta.content;
     if (STRUCTURED_DATA_REGEX.test(content)) {
-      content = JSON.parse(content.replaceAll('\'', '\"'));
+      const m = STRUCTURED_DATA_REGEX.exec(content);
+      content = {[m[1]]: m[2]};
     }
     if (acc[name]) {
       if (acc[name] instanceof Array) {
