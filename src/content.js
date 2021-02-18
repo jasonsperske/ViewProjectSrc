@@ -1,5 +1,16 @@
 let projectMetaData;
 
+function icons(prefix = '') {
+  return {setIcon: {
+    path: {
+      "16": `icons/${prefix}icon16.png`,
+      "19": `icons/${prefix}icon19.png`,
+      "48": `icons/${prefix}icon48.png`,
+      "128": `icons/${prefix}icon128.png`
+    }
+  }}
+}
+
 window.onload = () => {
   const STRUCTURED_DATA_REGEX = /^{\s*['"]?([\w_]*)['"]?\s*:\s*['"](.*)['"]\s*}$/;
 
@@ -21,6 +32,12 @@ window.onload = () => {
     }
     return acc;
   }, {});
+
+  if (projectMetaData != {}) {
+    chrome.runtime.sendMessage(icons());
+  } else {
+    chrome.runtime.sendMessage(icons('disabled/'));
+  }
 };
 
 chrome.runtime.onMessage.addListener((msg, sender, response) => {
