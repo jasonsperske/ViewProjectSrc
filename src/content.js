@@ -33,7 +33,7 @@ window.onload = () => {
     return acc;
   }, {});
 
-  if (projectMetaData != {}) {
+  if (Object.keys(projectMetaData).length > 0) {
     chrome.runtime.sendMessage(icons());
   } else {
     chrome.runtime.sendMessage(icons('disabled/'));

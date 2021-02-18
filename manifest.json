@@ -24,13 +24,12 @@
   },
   "content_scripts": [
     {
-      "matches": ["http://*/*"],
+      "matches": ["http://*/*","https://*/*"],
       "js": ["src/content.js"],
       "run_at": "document_start"
     }
   ],
   "permissions": [
-    "http://*/*",
-    "https://*/*"
+    "activeTab"
   ]
 }
