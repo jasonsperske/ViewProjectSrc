@@ -3,7 +3,7 @@
   "version": "0.0.3",
   "manifest_version": 2,
   "description": "Reads embeded meta tags that reveal a sites project structure, to help people learn how the web is made.",
-  "homepage_url": "http://jason.sperske.com/",
+  "homepage_url": "https://github.com/jasonsperske/ViewProjectSrc",
   "icons": {
     "16": "icons/icon16.png",
     "19": "icons/icon19.png",
